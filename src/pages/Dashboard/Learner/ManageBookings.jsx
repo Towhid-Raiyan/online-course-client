@@ -27,7 +27,7 @@ const ManageBookings = () => {
             const userEmail = user?.email;
             // console.log(userEmail);
             const response = await axios.get(
-                `http://localhost:3000/api/learner/bookings/${userEmail}`,
+                `https://online-school-server-ten.vercel.app/api/learner/bookings/${userEmail}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -48,7 +48,7 @@ const ManageBookings = () => {
         const token = localStorage.getItem("token");
         try {
             const response = await axios.delete(
-                `http://localhost:3000/api/bookings/${bookingId}`,
+                `https://online-school-server-ten.vercel.app/api/bookings/${bookingId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,

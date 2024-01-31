@@ -21,7 +21,7 @@ const AddCourse = () => {
             const token = localStorage.getItem("token");
 
             const response = await axios.post(
-                "http://localhost:3000/api/courses",
+                "https://online-school-server-ten.vercel.app/api/courses",
                 data,
                 {
                     headers: {

@@ -31,7 +31,7 @@ const CourseCard = ({ course }) => {
                 };
                 console.log(bookingData);
                 const response = await fetch(
-                    "http://localhost:3000/api/bookings",
+                    "https://online-school-server-ten.vercel.app/api/bookings",
                     {
                         method: "POST",
                         headers: {

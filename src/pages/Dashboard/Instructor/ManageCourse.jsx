@@ -38,7 +38,7 @@ const ManageCourse = () => {
                 headers: { Authorization: `Bearer ${token}` },
             };
             const response = await axios.get(
-                `http://localhost:3000/api/courses/${user?.email}`,
+                `https://online-school-server-ten.vercel.app/api/courses/${user?.email}`,
                 config
             );
             setCourses(response.data.courses);
@@ -56,7 +56,7 @@ const ManageCourse = () => {
                 headers: { Authorization: `Bearer ${token}` },
             };
             await axios.delete(
-                `http://localhost:3000/api/courses/${courseId}`,
+                `https://online-school-server-ten.vercel.app/api/courses/${courseId}`,
                 config
             );
             setCourses((prevCourses) =>
@@ -76,7 +76,7 @@ const ManageCourse = () => {
                 headers: { Authorization: `Bearer ${token}` },
             };
             await axios.put(
-                `http://localhost:3000/api/courses/${courseId}`,
+                `https://online-school-server-ten.vercel.app/api/courses/${courseId}`,
                 updatedData,
                 config
             );

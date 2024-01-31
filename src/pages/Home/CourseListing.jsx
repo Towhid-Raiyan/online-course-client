@@ -32,7 +32,7 @@ const CourseListing = () => {
         try {
             const queryParams = new URLSearchParams(filters).toString();
             const response = await fetch(
-                `http://localhost:3000/api/courses?page=${queryParams}`
+                `https://online-school-server-ten.vercel.app/api/courses?page=${queryParams}`
             );
             const data = await response.json();
 

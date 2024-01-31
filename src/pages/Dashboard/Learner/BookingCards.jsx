@@ -20,7 +20,7 @@ const BookingCards = ({ booking, handleRemoveBooking }) => {
         const token = localStorage.getItem("token");
         try {
             const response = await axios.get(
-                `http://localhost:3000/api/course/${courseId}`,
+                `https://online-school-server-ten.vercel.app/api/course/${courseId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
